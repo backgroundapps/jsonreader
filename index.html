@@ -3,20 +3,22 @@
     <title>JSON Reader</title>
     
   </head>
-  <body>
+  <body onload="run()">
     <h1>JSON Reader</h1>
     <div></div>
     
     <script>
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              var myObj = JSON.parse(this.responseText);
-              document.getElementById("demo").innerHTML = myObj.name;
-          }
-      };
-      xmlhttp.open("GET", "json_demo", true);
-      xmlhttp.send(); 
+      function run() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = myObj.name;
+            }
+        };
+        xmlhttp.open("GET", "json_demo", true);
+        xmlhttp.send(); 
+      }
     </script>
   </body>
 </html>
