@@ -13,7 +13,7 @@
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var myObj = JSON.parse(this.responseText);
-                document.getElementById("demo").innerHTML = "Name: " + myObj.name + "</br>";
+                document.getElementById("demo").innerHTML = "Name: <input type='text' value='" + myObj.name + "'></br>";
                 
             }
         };
