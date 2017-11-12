@@ -1,7 +1,6 @@
 <html>
   <heade>
     <title>JSON Reader</title>
-    
   </head>
   <body onload="run()">
     <h1>JSON Reader</h1>
@@ -16,10 +15,8 @@
                 document.getElementById("demo").innerHTML = "Name: <input type='text' value='" + myObj.name + "'></br>";
                 document.getElementById("demo").appendChild("<p>1</p>");
                 document.getElementById("demo").appendChild("<p>2</p>");
-                
             }
         };
-        
         xmlhttp.open("GET", "json_demo", true);
         xmlhttp.send(); 
       }
