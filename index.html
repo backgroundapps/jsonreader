@@ -4,22 +4,12 @@
   </head>
   <body onload="run()">
     <h1>JSON Reader</h1>
-    <p id="demo"></p>
     <h3>Demos:</h3>
-    <a href="demos/loop-demo/loop.html" >loop demo</a>
+    
+    <ul>
+      <li><a href="demos/start-demo/start.html" >start demo</a></li>
+      <li><a href="demos/loop-demo/loop.html" >loop demo</a></li>
+    </ul>
    
-    <script>
-      function run() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myObj = JSON.parse(this.responseText);
-                document.getElementById("demo").innerHTML = "Name: <input type='text' value='" + myObj.name + "'></br>";
-            }
-        };
-        xmlhttp.open("GET", "json_demo", true);
-        xmlhttp.send(); 
-      }
-    </script>
   </body>
 </html>
